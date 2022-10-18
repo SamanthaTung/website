@@ -5,7 +5,8 @@
     import homePage from "../Image/Homepage.svg";
     import downArrow from "../Icons/Arrowdown.svg";
     import { onMount } from "svelte";
-    import projectSnapshots from '../projectSnapshots'
+    import projectInfo from "../projectInfo";
+    import SquareTile from "../Components/SquareTile.svelte"
 
     let Carousel;
     onMount(async () => {
@@ -13,7 +14,10 @@
         Carousel = module.default;
     });
 
-    console.log(projectSnapshots)
+    let carouselIndex = 0;
+    $: currentCarouselProject = projectInfo[carouselIndex]
+
+    console.log(projectInfo);
 </script>
 
 <div class="home-page-background">
@@ -40,72 +44,51 @@
     </div>
 </div>
 
+
 <div class="content-of-page">
     <h2>1. Featured Projects</h2>
     <div class="project-tiles">
-        <div class="square-project-tile">
-            <div class="square-image">
-                <div class="badge">
-                    <span class="small"> Student </span>
-                </div>
-            </div>
-            <div class="h3-body">
-                <h3>Reverse</h3>
-                <p>
-                    Package-free groceries delivery service for time poor users
-                </p>
-            </div>
-        </div>
-        <div class="square-project-tile">
-            <div class="square-image">
-                <div class="badge">
-                    <span class="small"> Student </span>
-                </div>
-            </div>
-            <div class="h3-body">
-                <h3>Pulsair</h3>
-                <p>Air management platform for construction workers</p>
-            </div>
-        </div>
-        <div class="square-project-tile">
-            <div class="square-image">
-                <div class="badge">
-                    <span class="small"> Student </span>
-                </div>
-            </div>
-            <div class="h3-body">
-                <h3>Bubble</h3>
-                <p>Remote healthcare monitoring platform for health workers</p>
-            </div>
-        </div>
-        <div class="square-project-tile">
-            <div class="square-image">
-                <div class="badge">
-                    <span class="small"> Student </span>
-                </div>
-            </div>
-            <div class="h3-body">
-                <h3>Coin Rivet</h3>
-                <p>
-                    Crypto currency investment platform & wallet for beginners
-                </p>
-            </div>
-        </div>
+        <SquareTile title = 'Reverse' description ='Package-free groceries delivery service for time poor users' badge='Student'/>
+        <SquareTile title = 'Pulsair' description ='Air management platform for construction workers' badge='Student'/>
+        <SquareTile title = 'Bubble' description ='Remote healthcare monitoring platform for health workers' badge='Professional'/>
+        <SquareTile title = 'Coin Rivet' description ='Crypto currency investment platform & wallet for beginners' badge='Professional'/>
     </div>
     <h2>Short on time? Here're the quick snapshots</h2>
+</div>
 
+<div class="content-of-page">
     <div class="carousel">
         {#if Carousel}
-            <Carousel let:showPrevPage let:showNextPage>
-                <button slot="prev" on:click={showPrevPage}>prev</button>
-                {#each projectSnapshots as project}
+            <Carousel
+                let:showPrevPage
+                let:showNextPage
+                initialPageIndex={carouselIndex}
+                on:pageChange={function (event) {
+                    carouselIndex = event.detail;
+                }}
+            >
+                <button
+                    class="carousel-button"
+                    slot="prev"
+                    on:click={showPrevPage}>prev</button
+                >
+                {#each projectInfo as project}
                     <img src={project.image} />
                 {/each}
-                <button slot="next" on:click={showNextPage}>next</button>
+                <button
+                    class="carousel-button"
+                    slot="next"
+                    on:click={showNextPage}>next</button
+                >
             </Carousel>
         {/if}
     </div>
+    <h1>
+        {currentCarouselProject.overview.title}
+    </h1>
+    <p>{currentCarouselProject.overview.description}</p>
 </div>
+
 
 <style>
     .home-page {
@@ -144,26 +127,16 @@
     .h3-body {
         width: 100%;
     }
-    .project-tiles {
-        display: grid;
-        grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
-        gap: 16px;
-    }
-    .square-image {
-        background-color: var(--gray-1);
-        height: 262px;
-        width: 100%;
-        position: relative;
-    }
-    .badge {
-        width: fit-content;
-        padding: 4px 12px;
-        border-radius: 14px;
-        background-color: var(--gray-2);
-        position: absolute;
-        top: 12px;
-        right: 12px;
-    }
+    .carousel-button {
+    background: none;
+    border: none;
+    font: inherit;
+}
+.project-tiles {
+    display: grid;
+    grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+    gap: 16px;
+}
 
     @media (max-width: 750px) {
         .home-page {

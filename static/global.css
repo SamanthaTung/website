@@ -4,14 +4,17 @@ box-sizing: border-box;}
 
 :root{
     --gray-1: #f0f0f0;
+    --gray-2: #D2D2D2;
    
 }
-:root{
-    --gray-2: #D2D2D2;
+
+body{
+    font-family: sofia-pro, sans-serif;
 }
+
 h1{
     font-size: 48px;
-     font-family: sofia-pro, sans-serif;
+    
      font-weight: 600;
      font-style: normal;
      padding-bottom: 10px;
@@ -19,7 +22,7 @@ h1{
 
 h2{
     font-size: 32px;
-     font-family: sofia-pro, sans-serif;
+     
      font-weight: 500;
      font-style: normal;
      padding-top: 56px ;
@@ -29,7 +32,7 @@ h2{
 
 h3{
     font-size: 20px;
-     font-family: sofia-pro, sans-serif;
+     
      font-weight: 400;
      font-style: normal;
      padding-top: 8px ;
@@ -38,14 +41,14 @@ h3{
 
 p { 
     font-size: 16px;
-     font-family: sofia-pro, sans-serif;
+     
      font-weight: 300;
      font-style: normal;
 }
 
 .small{
     font-size: 12px;
-     font-family: sofia-pro, sans-serif;
+     
      font-weight: 300;
      font-style: normal;
 }

@@ -2,40 +2,32 @@
     import Image from "../../Components/Image.svelte";
 
     import Header from "../../Components/Header.svelte";
+    import HaydonsImageTwoColumnComponent from "../../Components/HaydonsImageTwoColumnComponent.svelte";
 </script>
 
-
-<div class='hero-banner'>
+<div class="hero-banner">
     <Header />
     <div class="content-of-page">
-        <div class='hero-content'>
-            <div class='hero-text'>
+        <div class="hero-content">
+            <div class="hero-text">
                 <h1>Reverse</h1>
-                <h3>Convenient package-free groceries delivery service for time poor users. Smart containers and trackers made package free delivery of more variety of food possible and efficiently.</h3>
-            <p>
-                Awards:
-            </p>
-            <p>
-                Skills shown in this project
-            </p>
+                <h3>
+                    Convenient package-free groceries delivery service for time
+                    poor users. Smart containers and trackers made package free
+                    delivery of more variety of food possible and efficiently.
+                </h3>
+                <p>Awards:</p>
+                <p>Skills shown in this project</p>
             </div>
-            <div class='hero-image'>
-            
+            <div class="hero-image" />
         </div>
-
-
-        </div>
-        
     </div>
-    
 </div>
 <div class="content-of-page">
-   
     <h2>1. Problem</h2>
     <div class="two-column">
         <Image title="Plastic packaging waste" description="" />
         <Image title="Plastic packaging waste" description="" />
-       
     </div>
     <h2>2. Project background</h2>
     <div class="two-column">
@@ -48,20 +40,41 @@
             <p>Plastic packaging</p>
         </div>
     </div>
+    <h3>3. How I got to the solution</h3>
+    <HaydonsImageTwoColumnComponent
+        title="First title"
+        src=""
+        bullets={[
+            { content: "first dot", bulletType: "dot" },
+            { content: "first dot", bulletType: "dot" },
+        ]}
+    />
+    <HaydonsImageTwoColumnComponent
+        title="Second title"
+        src=""
+        bullets={[
+            { content: "first arror", bulletType: "arrow" },
+            { content: "second dot", bulletType: "dot" },
+        ]}
+    />
+    <HaydonsImageTwoColumnComponent bullets={
+    [
+        { content: "asdasd", bulletType:'arrow'}
+        ]
+        } />
 </div>
 
 <style>
-   .hero-banner{
-    background-color: #6DA5BC;
-   }
+    .hero-banner {
+        background-color: #6da5bc;
+    }
 
-   .hero-content{
+    .hero-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 48px;
-       align-items: center;
-       padding: 80px 0;
-
+        align-items: center;
+        padding: 80px 0;
     }
     .image-top-wide {
         display: flex;
@@ -72,7 +85,7 @@
         height: 300px;
         width: 100%;
     }
-    .two-column{
+    .two-column {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 24px;
