@@ -1,5 +1,4 @@
 <script>
-  // todo underlined cta, whole thing should be <a>
   // @ts-nocheck
   import { fly } from "svelte/transition";
   import homePage from "../Image/Homepage.svg";
@@ -119,9 +118,9 @@
       </div>
     </div>
 
-    <UnderlinedCta>
+    <UnderlinedCta href="#featured">
       <img src={downArrow} alt="" />
-      <a href="#featured">Check out my projects</a>
+      Check out my projects
     </UnderlinedCta>
   </div>
 </section>
@@ -151,9 +150,9 @@
     />
   </div>
   <div class="view-more-projects-container">
-    <UnderlinedCta>
+    <UnderlinedCta href="/this-link-needs-updating">
       <img src={plusArrow} alt="" />
-      <a href="/this-link-needs-updating">View more projects</a>
+      View more projects
     </UnderlinedCta>
   </div>
 </section>
@@ -234,8 +233,8 @@
       </article>
     </div>
   {/key}
-  <UnderlinedCta
-    ><a href={currentCarouselProject.link}>Learn more about the project</a>
+  <UnderlinedCta href={currentCarouselProject.link}
+    >Learn more about the project
     <img src={rightArrow} alt="right arrow" /></UnderlinedCta
   >
 </section>

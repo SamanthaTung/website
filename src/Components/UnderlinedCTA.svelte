@@ -1,8 +1,13 @@
-<button class="button" on:click>
+<script>
+  // @ts-nocheck
+  export let href;
+</script>
+
+<a class="button" {href}>
   <h3 class="button-text">
     <slot />
   </h3>
-</button>
+</a>
 
 <style>
   .button {
@@ -15,6 +20,8 @@
     gap: 8px;
     border-bottom: 2px solid black;
     width: fit-content;
+    color: inherit;
+    text-decoration: none;
   }
   .button-text > :global(img) {
     width: 24px;
