@@ -6,14 +6,12 @@
     import Image from "../../Components/Image.svelte";
 </script>
 
-<Header />
-
 <div class="content-of-page">
-    <div class="hero">
-        <div class="hero-image">
+    <div class="about">
+        <div class="about-image">
             <p class="about-image-text">Hover to see more</p>
         </div>
-        <div class="hero-text">
+        <div class="about-text">
             <h1>Heya, nice to e-meet you!</h1>
 
             <h3>
@@ -146,18 +144,18 @@ bigger picture, also help designer/ engineer/ businessman focus on what really m
 </div>
 
 <style>
-    .hero {
+    .about {
         display: flex;
         flex-direction: row;
         padding-top: 48px;
     }
-    .hero-image {
+    .about-image {
         background-color: var(--gray-1);
         height: 500px;
         width: 100%;
         position: relative;
     }
-    .hero-text {
+    .about-text {
         display: flex;
         flex-direction: column;
         justify-content: space-between;

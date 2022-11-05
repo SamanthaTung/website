@@ -1,12 +1,9 @@
 <script>
     import Image from "../../Components/Image.svelte";
-
-    import Header from "../../Components/Header.svelte";
     import HaydonsImageTwoColumnComponent from "../../Components/HaydonsImageTwoColumnComponent.svelte";
 </script>
 
-<div class="hero-banner">
-    <Header />
+<div class="hero-banner hero">
     <div class="content-of-page">
         <div class="hero-content">
             <div class="hero-text">
@@ -64,8 +61,16 @@
         } />
 </div>
 
-<style>
-    .hero-banner {
+<svelte:head>
+    <style>
+        body {
+            --header-bg: #6da5bc;
+        }
+    </style>
+</svelte:head>
+
+<style>    
+.hero-banner {
         background-color: #6da5bc;
     }
 

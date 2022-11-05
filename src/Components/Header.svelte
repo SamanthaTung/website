@@ -1,62 +1,90 @@
 <script>
-    import Arrow from "svelte-carousel/src/components/Arrow/Arrow.svelte";
-
+  // @ts-nocheck
 
   import SquareTile from "../Components/SquareTile.svelte";
+  /** @type {HTMLElement} */
+  let headerEl;
+
+  let dropdownOpen = false;
 </script>
 
-<header>
-  <a href="." class="logo"> Sam Tung</a>
-  <div class="nav-option">
-    <div>
-      <h3>
-        <div class="dropdown">
-          <a href="#"> Work</a>
-          <div class="dropdown-content">
-            <div class=" content-of-page">
-              <div class="project-tiles">
-                <a href="/reverse">
-                  <SquareTile
-                    title="Reverse"
-                    description="Package-free groceries delivery service for time poor users"
-                    badge="Student"
-                  />
-                </a>
-                <SquareTile
-                  title="Pulsair"
-                  description="Air management platform for construction workers"
-                  badge="Student"
-                />
-                <SquareTile
-                  title="Bubble"
-                  description="Remote healthcare monitoring platform for health workers"
-                  badge="Professional"
-                />
-                <SquareTile
-                  title="Coin Rivet"
-                  description="Crypto currency investment platform & wallet for beginners"
-                  badge="Professional"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </h3>
-    </div>
+<svelte:window
+  on:click={(e) => {
+    if (headerEl && (headerEl.contains(e.target) || e.target === headerEl)) {
+      // do nothing
+    } else {
+      dropdownOpen = false;
+    }
+  }}
+/>
 
-    <h3>
+<header class:dropdown={dropdownOpen} bind:this={headerEl}>
+  <a href="/" class="logo"> Sam Tung</a>
+  <div class="nav-option">
+    <h3 class="nav-item">
+      <button
+        on:click={() => {
+          dropdownOpen = !dropdownOpen;
+        }}
+      >
+        Work</button
+      >
+    </h3>
+
+    <h3 class="nav-item">
       <a href="./about"> About</a>
     </h3>
+  </div>
+  <div class="dropdown-content" class:show={dropdownOpen}>
+    <div class=" content-of-page">
+      <div
+        class="project-tiles"
+        on:click={() => {
+          dropdownOpen = false;
+        }}
+      >
+        <a href="/reverse">
+          <SquareTile
+            title="Reverse"
+            description="Package-free groceries delivery service for time poor users"
+            badge="Student"
+          />
+        </a>
+        <SquareTile
+          title="Pulsair"
+          description="Air management platform for construction workers"
+          badge="Student"
+        />
+        <SquareTile
+          title="Bubble"
+          description="Remote healthcare monitoring platform for health workers"
+          badge="Professional"
+        />
+        <SquareTile
+          title="Coin Rivet"
+          description="Crypto currency investment platform & wallet for beginners"
+          badge="Professional"
+        />
+      </div>
+    </div>
   </div>
 </header>
 
 <style>
   header {
+    --header-bg: var(--gray-1);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 16px 24px;
+    height: 80px;
+    background: var(--header-bg);
+    position: relative;
+  }
+  header.dropdown {
+    --header-bg: #f9f9f9;
+    z-index: 2;
   }
   .nav-option {
     display: flex;
@@ -69,6 +97,8 @@
     font-family: sofia-pro, sans-serif;
     font-weight: 600;
     font-style: normal;
+    text-decoration: none;
+    color: black;
   }
 
   /* Dropdown content (hidden by default) */
@@ -78,12 +108,13 @@
     background-color: #f9f9f9;
     width: 100%;
     left: 0;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    top: 100%;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.05);
     z-index: 1;
+    padding-bottom: 24px;
   }
 
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
+  .dropdown-content.show {
     background-color: #f9f9f9;
     display: block;
   }
@@ -94,7 +125,14 @@
     gap: 16px;
   }
 
-  a {
+  .nav-item a,
+  .nav-item button {
+    font: inherit;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    cursor: pointer;
     border-block-end: 3px solid var(--border-color, transparent);
     color: black;
     display: inline-block;
@@ -104,7 +142,10 @@
     text-decoration: none;
   }
 
-  a:where(:hover, :focus) {
+  .nav-item a:where(:hover, :focus) {
+    --border-color: black;
+  }
+  .nav-item button:where(:hover, :focus) {
     --border-color: black;
   }
 </style>
