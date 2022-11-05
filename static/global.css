@@ -45,6 +45,9 @@ p {
   font-weight: 300;
   font-style: normal;
 }
+ul {
+  font-weight: 300;
+}
 
 section {
   /* block = top and bottom */
