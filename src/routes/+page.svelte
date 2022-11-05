@@ -161,49 +161,40 @@
   <h2>Short on time? Here're the quick snapshots</h2>
 </section>
 <section class="carousel">
-  {#if Carousel}
-    <Carousel
-      bind:this={carouselElement}
-      let:showPrevPage
-      let:showNextPage
-      initialPageIndex={carouselIndex}
-      on:pageChange={function (event) {
-        carouselIndex = event.detail;
+  <svelte:component
+    this={Carousel}
+    bind:this={carouselElement}
+    initialPageIndex={carouselIndex}
+    on:pageChange={function (event) {
+      carouselIndex = event.detail;
+    }}
+    dots={false}
+    arrows={false}
+  >
+    {#each snapshotInfo as project}
+      <div class="carousel-image-container">
+        <img src={project.image} alt="{project.title} image" />
+      </div>
+    {/each}
+  </svelte:component>
+  <div class="content-of-page carousel-buttons">
+    <button
+      class="carousel-button"
+      on:click={() => {
+        carouselElement?.goToPrev();
       }}
-      dots={false}
-      arrows={false}
     >
-      {#each snapshotInfo as project}
-        <div class="carousel-image-container">
-          <img src={project.image} alt="{project.title} image" />
-        </div>
-      {/each}
-      <button class="carousel-button" slot="prevssss" on:click={showPrevPage}>
-        <img src={leftArrow} alt="left carousel arrow" /></button
-      >
-      <button class="carousel-button" slot="nextssss" on:click={showNextPage}>
-        <img src={rightArrow} alt="right carousel arrow" /></button
-      >
-    </Carousel>
-    <div class="content-of-page carousel-buttons">
-      <button
-        class="carousel-button"
-        on:click={() => {
-          carouselElement.goToPrev();
-        }}
-      >
-        <img src={leftArrow} alt="left carousel arrow" /></button
-      >
-      <button
-        class="carousel-button"
-        on:click={() => {
-          carouselElement.goToNext();
-        }}
-      >
-        <img src={rightArrow} alt="right carousel arrow" /></button
-      >
-    </div>
-  {/if}
+      <img src={leftArrow} alt="left carousel arrow" /></button
+    >
+    <button
+      class="carousel-button"
+      on:click={() => {
+        carouselElement?.goToNext();
+      }}
+    >
+      <img src={rightArrow} alt="right carousel arrow" /></button
+    >
+  </div>
 </section>
 <section class="content-of-page snapshot-content">
   <h2>
@@ -243,11 +234,8 @@
 
   <div class="about-me-link-container">
     <h3>Fun fact, but here's more</h3>
-    <UnderlinedCta
-      ><a href="/about">About me</a><img
-        src={rightArrow}
-        alt="right arrow"
-      /></UnderlinedCta
+    <UnderlinedCta href="/about"
+      >About me<img src={rightArrow} alt="right arrow" /></UnderlinedCta
     >
   </div>
 </section>
