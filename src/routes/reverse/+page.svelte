@@ -28,7 +28,7 @@ food possible and efficiently."
 <section class="content-of-page">
   <h2>1. Problem</h2>
   <TwoColumn>
-    <Image title="Plastic packaging waste" type='column'>
+    <Image title="Plastic packaging waste" type="column">
       <ul>
         <li>
           42% of plastic production is used for single use plastic packaging and
@@ -41,7 +41,7 @@ food possible and efficiently."
         </li>
       </ul>
     </Image>
-    <Image title="Package-free shop is inconvenient" type='column'>
+    <Image title="Package-free shop is inconvenient" type="column">
       <ul>
         <li>
           It require too much planning - bringing containers and portion
@@ -88,12 +88,23 @@ food possible and efficiently."
 <section class="content-of-page">
   <h2>3. How I got to the solution</h2>
   <h3>Understanding why it is not convenient for the users</h3>
-  <Image type='row' title="Desk research & User Interviews" src="/reverse.png">
+  <Image type="row" title="Desk research & User Interviews" src="/reverse.png">
     <ul>
-      <li>Geolocation limitations: users doesn’t go frequently as there’s not package-free shops near where they live</li>
-      <li class="arrow">Opportunity to make package free shops more accessible to them</li>
-      <li>People care about the environment to an extend: they will not drive for miles or pay a lot more for more sustainable products</li>
-      <li class="arrow">How might we make package-free shopping more convenient, accessible, and affordable for the busy users, while cost-effective to run?</li>
+      <li>
+        Geolocation limitations: users doesn’t go frequently as there’s not
+        package-free shops near where they live
+      </li>
+      <li class="arrow">
+        Opportunity to make package free shops more accessible to them
+      </li>
+      <li>
+        People care about the environment to an extend: they will not drive for
+        miles or pay a lot more for more sustainable products
+      </li>
+      <li class="arrow">
+        How might we make package-free shopping more convenient, accessible, and
+        affordable for the busy users, while cost-effective to run?
+      </li>
     </ul>
   </Image>
 </section>
@@ -104,15 +115,3 @@ food possible and efficiently."
     }
   </style>
 </svelte:head>
-
-<style>
-  .image-top-wide {
-    display: flex;
-    flex-direction: column;
-  }
-  .image-wide {
-    background-color: var(--gray-1);
-    height: 300px;
-    width: 100%;
-  }
-</style>
