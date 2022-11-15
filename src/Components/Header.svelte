@@ -19,21 +19,23 @@
 />
 
 <header class:dropdown={dropdownOpen} bind:this={headerEl}>
-  <a href="/" class="logo"> Sam Tung</a>
-  <div class="nav-option">
-    <h3 class="nav-item">
-      <button
-        on:click={() => {
-          dropdownOpen = !dropdownOpen;
-        }}
-      >
-        Work</button
-      >
-    </h3>
+  <div class="width-clamper">
+    <a href="/" class="logo"> Sam Tung</a>
+    <div class="nav-option">
+      <h3 class="nav-item">
+        <button
+          on:click={() => {
+            dropdownOpen = !dropdownOpen;
+          }}
+        >
+          Work</button
+        >
+      </h3>
 
-    <h3 class="nav-item">
-      <a href="./about"> About</a>
-    </h3>
+      <h3 class="nav-item">
+        <a href="./about"> About</a>
+      </h3>
+    </div>
   </div>
   <div class="dropdown-content" class:show={dropdownOpen}>
     <div class=" content-of-page">
@@ -73,18 +75,26 @@
 <style>
   header {
     --header-bg: var(--gray-1);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     padding: 16px 24px;
     height: 80px;
     background: var(--header-bg);
     position: relative;
+    display: flex;
+    align-items: center;
   }
   header.dropdown {
     --header-bg: #f9f9f9;
     z-index: 2;
+  }
+
+  .width-clamper {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   .nav-option {
     display: flex;
@@ -136,8 +146,6 @@
     border-block-end: 3px solid var(--border-color, transparent);
     color: black;
     display: inline-block;
-    margin-block-end: 0.5rem;
-    margin-inline-end: 0.5rem;
     padding: 0.5rem 0.1rem;
     text-decoration: none;
   }

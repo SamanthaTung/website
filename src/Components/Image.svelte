@@ -1,37 +1,60 @@
 <script>
-    export let title;
-    export let description;
-    export let row = false;
+  export let title;
+  /** @type {'column'|'row'|'row-reverse'}*/
+  export let type;
+  export let src;
 </script>
 
-<div class="image-top-wide {row ? 'row' : ''}">
-    <div class="image-wide" />
-    <div class="h3-body">
-        <h3>{title}</h3>
-        <p>{description}</p>
-        
-    </div>
+<div class="image {type}">
+  <div class="image-wide" class:placeholder={!src}>
+    {#if src}
+      <img {src} alt={title} />
+    {/if}
+  </div>
+  <div class="h3-body">
+    <h3>{title}</h3>
+    <slot />
+  </div>
 </div>
 
 <style>
-    .image-top-wide {
-        display: flex;
-        flex-direction: column;
-    }
-    .row{
-        flex-direction: row;
+  .image {
+    display: flex;
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+  .row {
+    flex-direction: row;
+    gap: 24px;
+  }
+  .row-reverse {
+    flex-direction: row-reverse;
+    gap: 24px;
+  }
+  .image-wide {
+    height: 300px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .placeholder {
+    background-color: var(--gray-2);
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
 
+  @media (max-width: 750px) {
+    .row {
+      flex-direction: column;
     }
-    .image-wide {
-        background-color: var(--gray-1);
-        height: 300px;
-        width: 100%;
+    .row-reverse {
+      flex-direction: column;
     }
-
-    @media (max-width: 750px) {
-        .problem,
-        .background {
-            grid-template-columns: 1fr;
-        }
-    }
+  }
 </style>

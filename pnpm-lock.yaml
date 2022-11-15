@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@sveltejs/adapter-auto': next
   '@sveltejs/kit': next
+  devalue: ^4.2.0
   svelte: ^3.44.0
   svelte-carousel: ^1.0.20
   svelte-check: ^2.7.1
@@ -10,7 +11,8 @@ specifiers:
 
 devDependencies:
   '@sveltejs/adapter-auto': 1.0.0-next.87
-  '@sveltejs/kit': 1.0.0-next.535_svelte@3.52.0+vite@3.2.2
+  '@sveltejs/kit': 1.0.0-next.546_svelte@3.52.0+vite@3.2.2
+  devalue: 4.2.0
   svelte: 3.52.0
   svelte-carousel: 1.0.20
   svelte-check: 2.9.2_svelte@3.52.0
@@ -140,8 +142,8 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.535_svelte@3.52.0+vite@3.2.2:
-    resolution: {integrity: sha512-sbVFeidRGYKqahVWATuvl9PVnIDA/DvXUuq3LAV7eLXf9LWsdMt+9OhXmz8Ltxv8ov3+Ph6gcVSBvisF4BEvBQ==}
+  /@sveltejs/kit/1.0.0-next.546_svelte@3.52.0+vite@3.2.2:
+    resolution: {integrity: sha512-QEA8fIdgRdjf9e0ti+EuEPG3SopyhA9/B4VuWqkT8W6A2q+jb5v2ZvImDRbpOnXJ0G55hlnFq9Mp2hHQ4DYYbQ==}
     engines: {node: '>=16.14'}
     hasBin: true
     requiresBuild: true

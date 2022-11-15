@@ -45,8 +45,18 @@ p {
   font-weight: 300;
   font-style: normal;
 }
+/* lists */
 ul {
   font-weight: 300;
+  padding-left: 3ch;
+}
+
+li.arrow {
+  list-style-image: url(/src/Icons/Arrowbullet.svg);
+}
+/* space between list items ⬇️ */
+li + li {
+  /* margin-top: 8px; */
 }
 
 section {
