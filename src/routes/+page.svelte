@@ -105,7 +105,7 @@
 <section class="home-page-background hero">
   <div class="content-of-page">
     <div class="home-page">
-      <img src={homePage} alt="" />
+      <img class="home-image" src={homePage} alt="" />
 
       <div class="h1-h3">
         <h1>Heya, nice to e-meet you!</h1>
@@ -259,6 +259,10 @@
   .home-page-background {
     background-color: #f9f5ec;
     padding-bottom: 48px;
+  }
+
+  .home-image {
+    width: 100%;
   }
   .view-more-projects-container {
     display: flex;
