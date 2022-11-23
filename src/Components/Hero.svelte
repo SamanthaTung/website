@@ -1,4 +1,6 @@
 <script>
+  import Badge from "./Badge.svelte";
+
   export let imageSrc;
   export let title;
   export let description;
@@ -28,7 +30,7 @@
         <p>Skills shown in this project</p>
         <div class="skill-container">
           {#each skills as skill}
-            <span class="skill">{skill}</span>
+            <Badge>{skill}</Badge>
           {/each}
         </div>
       </div>
@@ -68,13 +70,7 @@
     flex-wrap: wrap;
     gap: 16px;
   }
-  .skill {
-    padding: 4px 16px;
-    background: var(--gray-2);
-    border-radius: 1000px;
-    font-weight: 400;
-    font-size: 12px;
-  }
+
   @media (max-width: 610px) {
     .hero-image {
       display: none;

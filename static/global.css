@@ -52,7 +52,7 @@ ul {
 }
 
 li.arrow {
-  list-style-image: url(/src/Icons/Arrowbullet.svg);
+  list-style-image: url(/Arrowbullet.svg);
 }
 /* space between list items ⬇️ */
 li + li {

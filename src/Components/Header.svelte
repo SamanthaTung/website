@@ -156,4 +156,8 @@
   .nav-item button:where(:hover, :focus) {
     --border-color: black;
   }
+  .project-tiles a {
+    color: inherit;
+    text-decoration: none;
+  }
 </style>

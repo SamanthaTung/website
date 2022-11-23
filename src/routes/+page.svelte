@@ -132,21 +132,25 @@
       title="Reverse"
       description="Package-free groceries delivery service for time poor users"
       badge="Student"
+      href="/reverse"
     />
     <SquareTile
       title="Pulsair"
       description="Air management platform for construction workers"
       badge="Student"
+      href="/pulsair"
     />
     <SquareTile
       title="Bubble"
       description="Remote healthcare monitoring platform for health workers"
       badge="Professional"
+      href="/bubble"
     />
     <SquareTile
       title="Coin Rivet"
       description="Crypto currency investment platform & wallet for beginners"
       badge="Professional"
+      href="/coinrivet"
     />
   </div>
   <div class="view-more-projects-container">
@@ -295,6 +299,7 @@
 
   .carousel-buttons {
     position: absolute;
+    z-index: 2;
     width: 100%;
     height: 100%;
     top: 0;
@@ -305,9 +310,12 @@
     justify-content: space-between;
   }
   .carousel-button {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.3);
     border: none;
     font: inherit;
+    display: flex;
+    border-radius: 50%;
+    padding: 2px;
   }
   .snapshot-grid {
     display: grid;
