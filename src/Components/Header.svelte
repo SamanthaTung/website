@@ -38,20 +38,20 @@
     </div>
   </div>
   <div class="dropdown-content" class:show={dropdownOpen}>
-    <div class=" content-of-page">
+    <div class="content-of-page">
       <div
         class="project-tiles"
         on:click={() => {
           dropdownOpen = false;
         }}
+        on:keydown={() => {}}
       >
-        <a href="/reverse">
-          <SquareTile
-            title="Reverse"
-            description="Package-free groceries delivery service for time poor users"
-            badge="Student"
-          />
-        </a>
+        <SquareTile
+          title="Reverse"
+          description="Package-free groceries delivery service for time poor users"
+          badge="Student"
+          href="/reverse"
+        />
         <SquareTile
           title="Pulsair"
           description="Air management platform for construction workers"
