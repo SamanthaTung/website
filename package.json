@@ -10,7 +10,7 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^2",
+		"@sveltejs/adapter-static": "^2",
 		"@sveltejs/kit": "^1",
 		"devalue": "^4.2.0",
 		"svelte": "^3.44.0",
