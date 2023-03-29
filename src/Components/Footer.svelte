@@ -23,7 +23,7 @@
 
 <style>
   footer {
-    background: var(--gray-1);
+    background: white;
   }
 
   .footer-bottom {

@@ -10,31 +10,32 @@
 <section class="content-of-page">
   <div class="about">
     <div class="about-image">
-      <p class="about-image-text">Hover to see more</p>
+      <!-- <p class="about-image-text">Hover to see more</p> -->
     </div>
     <div class="about-text">
       <h1>Heya, nice to e-meet you!</h1>
 
       <h3>
-        I am a UX designers who enjoy thinking about the big picture, unpacking
-        problems and framing opportunities. I am a strong believer of using
-        design thinking to improve people&apos;s lives and their environment.
-        <br />
-        <br />
-        When I’m not staring at my laptop, I love to go near waters or go for food
-        with friends and have a good time!
+        I am a UX designer who enjoys thinking about the big picture, unpacking
+        problems, and framing opportunities. I am a strong believer in using
+        design thinking to improve people's lives and their environment.
+        <br /><br />
+        When I’m not staring at my laptop, I love to go near the waters or go for
+        food with friends and have a good time!
       </h3>
-      <div class="button">
+      <!-- <UnderlinedCta >
         <img src={downloadIcon} class="icons" alt="download icon" />
-        <h3 class="button-text">Checkout my CV</h3>
-      </div>
+        Checkout my CV</UnderlinedCta> -->
     </div>
   </div>
 </section>
 <section class="content-of-page">
   <h2>Experience</h2>
   <div class="experience">
-    <div class="experience-image" />
+    <div class="experience-image">
+      <img src="/AboutMe/AboutMe3.png" alt="ux connections" />
+    </div>
+
     <div class="experience-text">
       <div class="title">
         <h3>UX Connections / UX Consultants</h3>
@@ -44,27 +45,31 @@
       <ul>
         <li>
           <span
-            >Do: User research, User journeys, WF, project management, UT,
-            collaboration with and handover to developers
+            >Project discovery: Conduct user research and requirement gathering
+            workshops, map out user journeys, define ways of working
           </span>
         </li>
         <li>
           <span
-            >Worked for various clients: RAPP, Ralph Lauren, PayPal, Mulberry,
-            Ericssons</span
-          >
+            >Project delivery: Create wireframes and prototypes for user
+            testing, create high-fidelity UI designs along with the design
+            system, and collaborate with developers to build the final product<span
+            />
+          </span>
         </li>
         <li>
           <span>
-            Learnings: Project management, User testing, User research,
-            Wireframings and prototyping</span
+            Worked for various clients: RAPP, Ralph Lauren, PayPal, Mulberry,
+            Ericsson</span
           >
         </li>
       </ul>
     </div>
   </div>
   <div class="experience">
-    <div class="experience-image" />
+    <div class="experience-image">
+      <img src="/AboutMe/AboutMe4.png" alt="ux connections" />
+    </div>
     <div class="experience-text">
       <div class="title">
         <h3>Shark Ninja UK / Human centred Intern</h3>
@@ -74,20 +79,21 @@
       <ul>
         <li>
           <span
-            >Do: User research, Ideation sessions, Physical product prototyping,
-            3D CAD & renderings
+            >Conduct user research and ideation sessions, Create rapid
+            prototypes, 3D CAD & renderings
           </span>
         </li>
         <li>
           <span
-            >Learnings: Human centred design processes, facilitate
-            brainstormings, rapid prototyping</span
-          >
+            >Learn to apply the design process in real-world contexts and create
+            realistic project plans
+          </span>
         </li>
         <li>
           <span>
-            What I wanted to do next: Products with multiple touch points, focus
-            on users needs, sustainable manufacturing</span
+            What I wanted to do next: Design products with multiple touchpoints
+            that address a wider range of users' needs, all while sustainably
+            manufactured</span
           >
         </li>
       </ul>
@@ -97,30 +103,32 @@
 <section class="content-of-page">
   <h2>What I find important in design</h2>
   <TwoColumn>
-    <Image title="Design the right thing right" type="column">
+    <Image
+      title="Design the right thing right"
+      type="column"
+      src="/AboutMe/AboutMe5.svg"
+    >
       <ul>
         <li>
-          I believe spending time to understand problem, help organisation save
-          money, resources to pivot in the later stage
+          I believe spending time to understand the root cause of the problem
+          helps organisations save money and resources in the long-term
         </li>
         <li>
-          It also allow designer/ engineer/ businessman to see the bigger
-          picture and focus on what really matters and put effort in the right
-          place
+          It also allows the designer/ engineer/ businessman to see the bigger
+          picture and put in the effort to solve the right problem
         </li>
       </ul>
     </Image>
-    <Image title="Sustainability" type="column">
+    <Image title="Sustainability" type="column" src="/AboutMe/AboutMe6.svg">
       <ul>
         <li>
-          Related to the last point, by designing the right thing we focus
-          resources in the right problem area and reduce waste that way.
+          Related to the last point, by focusing our resources on the right
+          problem area, we reduce waste that way.
         </li>
         <li>
-          Related to the last point, by designing the right thing we focus
-          resources in the right problem area and reduce waste that way. It’s
-          not just about the environment, but also socially how can we help
-          vulnerable groups live a independent sustainable live
+          Sustainability is also not just about the environment, but also
+          socially how can we help vulnerable groups live an independent, happy,
+          and sustainable life
         </li>
       </ul>
     </Image>
@@ -133,34 +141,34 @@
       <h3>🇭🇰 From Hong Kong</h3>
       <p>
         I am born and raised in Hong Kong, came to study at Loughborough
-        University and settled in London since I graduated. Experiencing these
-        cultural differences also help me develope empathy and sensitivity
+        University, and settled in London since I graduated. Experiencing these
+        cultural differences also help me develop empathy and sensitivity.
       </p>
     </div>
     <div class="emoji text">
       <h3>✨ Try new things</h3>
       <p>
-        I love trying new things, traveing and seeking new experience. Always
-        searching for the magic moment that I want to create for the users of my
-        products.
+        I love trying new things, traveling, and seeking new experiences. I'm
+        always searching for the magic moment that I want to create for the
+        users of my products.
       </p>
     </div>
   </TwoColumn>
   <TwoColumn>
     <div class="emoji text">
-      <h3>💻 Made this website to learn code</h3>
+      <h3>💻 Made this website to learn to code</h3>
       <p>
-        Honestly, I didn’t grow up with programming and thought it’s never too
-        late. I learn things best in practise so I set this goal to learn basic
-        HTML, CSS and Javascript in the making of my personal site
+        I didn’t grow up passionate about tech and programming but thought it
+        was never too late. I learn things best in practice, so I set this goal
+        to learn basic HTML, CSS, and Javascript in the making of my website
       </p>
     </div>
     <div class="emoji text">
       <h3>🍵 🛶️ Love matcha latte & kayaking</h3>
       <p>
         Sounds basic but I do enjoy having a matcha latte to wake up a bit. When
-        I get to be a bit more sluggish, I enjoy kayaking or just going in to
-        the nature and come back feeling refreshed!
+        I get to be a bit more sluggish, I enjoy kayaking or just going into
+        nature and coming back feeling refreshed!
       </p>
     </div>
   </TwoColumn>
@@ -171,16 +179,91 @@
 </section>
 <section class="content-of-page" n>
   <h2>Award & Features</h2>
+
   <TwoColumn>
-    <div class="icon-h3">
+    <a
+      class="icon-h3"
+      href="https://awards.ixda.org/entry/2022/reverse-a-hassle-free-and-package-free-groceries-delivery-service/"
+      target="_blank"
+    >
       <div class="title">
         <img src={linkIcon} class="icons" alt="link icon" />
         <h3>IxDA 2022</h3>
-        <p>Shortlisted</p>
       </div>
-
-      <p>body</p>
-    </div>
+      <p>Shortlisted</p>
+    </a>
+    <a
+      class="icon-h3"
+      href="https://ux-design-awards.com/winners/2022-1-125-reverse-a-hassle-free-package-free-groceries-delivery-service"
+      target="_blank"
+    >
+      <div class="title">
+        <img src={linkIcon} class="icons" alt="link icon" />
+        <h3>UX Design Award 2022</h3>
+      </div>
+      <p>Nominated</p>
+    </a>
+  </TwoColumn>
+  <TwoColumn>
+    <a
+      class="icon-h3"
+      href="https://www.thersa.org/student-design-awards/winners/2020-21/right-to-breathe"
+      target="_blank"
+    >
+      <div class="title">
+        <img src={linkIcon} class="icons" alt="link icon" />
+        <h3>RSA Student Design Award 2022</h3>
+      </div>
+      <p>Winner</p>
+    </a>
+    <a
+      class="icon-h3"
+      href="https://www.newdesigners.com/awards/dca-packaging-futures-award/"
+      target="_blank"
+    >
+      <div class="title">
+        <img src={linkIcon} class="icons" alt="link icon" />
+        <h3>New Designer 2022</h3>
+      </div>
+      <p>DCA Packaging Futures Award Winner</p>
+    </a>
+  </TwoColumn>
+  <TwoColumn>
+    <a
+      class="icon-h3"
+      href="https://www.lboro.ac.uk/alumni/news/2021/september/four-graduates-shortlisted-for-awards/#:~:text=Samantha"
+      target="_blank"
+    >
+      <div class="title">
+        <img src={linkIcon} class="icons" alt="link icon" />
+        <h3>Global Design Graduate Show 2022</h3>
+      </div>
+      <p>Shortlisted</p>
+    </a>
+    <a
+      class="icon-h3"
+      href="https://online.fliphtml5.com/byhn/vgbv/#p=116"
+      target="_blank"
+    >
+      <div class="title">
+        <img src={linkIcon} class="icons" alt="link icon" />
+        <h3>Icons Magazine Feature (Autumn 2021)</h3>
+      </div>
+      <p>UK’s most promising design graduates</p>
+    </a>
+  </TwoColumn>
+  <TwoColumn>
+    <a
+      class="icon-h3"
+      href="https://www.sdc.ixda.org/2021-finalists"
+      target="_blank"
+    >
+      <div class="title">
+        <img src={linkIcon} class="icons" alt="link icon" />
+        <h3>IxDA 2021 Student Design Charette</h3>
+      </div>
+      <p>Champion</p>
+    </a>
   </TwoColumn>
 </section>
 
@@ -188,41 +271,59 @@
   .about {
     display: flex;
     flex-direction: row;
-    padding-top: 48px;
+    gap: 24px;
+    padding-top: 36px;
   }
   .about-image {
-    background-color: var(--gray-1);
-    height: 500px;
+    background: url(/AboutMe/AboutMe1.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+  }
+  .about-image:hover {
+    background: url(/AboutMe/AboutMe2.png) no-repeat;
+    background-position: center;
+    background-size: cover;
     width: 100%;
     position: relative;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 700px) {
     .about-image {
-      display: none;
+      width: 100%;
+      min-height: 300px;
+      position: relative;
+    }
+    .about {
+      padding-top: unset;
+      flex-direction: column;
     }
   }
   .about-text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-left: 24px;
     width: 100%;
   }
 
   .about-image-text {
     position: absolute;
     bottom: 24px;
+    right: 24px;
 
     margin-left: auto;
     margin-right: auto;
-    left: 0;
-    right: 0;
+
     text-align: center;
   }
   .icons {
     width: 24px;
     height: 24px;
+  }
+  .icon-h3 {
+    text-decoration: unset;
+    color: unset;
   }
   .button-text {
     line-height: 100%;
@@ -241,7 +342,6 @@
     flex-direction: row;
     align-items: baseline;
     gap: 16px;
-    padding-bottom: 8px;
   }
 
   .experience-image {

@@ -1,26 +1,66 @@
 <script>
   // @ts-nocheck
 
-  import SquareTile from "../Components/SquareTile.svelte";
+  import { onMount } from "svelte";
+import SquareTile from "../Components/SquareTile.svelte";
   /** @type {HTMLElement} */
   let headerEl;
+  let logoEl;
+  let aboutEl;
+  let prevScroll = 0;
+  let currentScroll;
+  let scrollingDown = false;
 
   let dropdownOpen = false;
+
+  onMount(() => {
+    prevScroll = window.scrollY
+   
+  })
 </script>
 
 <svelte:window
   on:click={(e) => {
-    if (headerEl && (headerEl.contains(e.target) || e.target === headerEl)) {
+    const clickedElement = e.target;
+
+    if (
+      headerEl &&
+      (headerEl.contains(clickedElement) || clickedElement === headerEl) &&
+      clickedElement !== logoEl &&
+      clickedElement !== aboutEl
+    ) {
       // do nothing
     } else {
       dropdownOpen = false;
     }
   }}
+
+on:scroll={(e) =>{
+// prevScroll = window.scrollY
+currentScroll = window.scrollY
+console.log('prevScroll',prevScroll)
+console.log('currentScroll',currentScroll)
+
+//v do something
+if (currentScroll >= prevScroll && currentScroll>80 ) {
+  // hide 
+  scrollingDown=true;
+
+} else {
+  // show
+  scrollingDown=false;
+}
+
+prevScroll=currentScroll
+}
+
+}
+
 />
 
-<header class:dropdown={dropdownOpen} bind:this={headerEl}>
+<header class={scrollingDown===true? 'scroll-down':''} class:dropdown={dropdownOpen} bind:this={headerEl}>
   <div class="width-clamper">
-    <a href="/" class="logo"> Sam Tung</a>
+    <a href="/" class="logo" bind:this={logoEl}> Sam Tung</a>
     <div class="nav-option">
       <h3 class="nav-item">
         <button
@@ -33,7 +73,7 @@
       </h3>
 
       <h3 class="nav-item">
-        <a href="./about"> About</a>
+        <a href="./about" bind:this={aboutEl}> About</a>
       </h3>
     </div>
   </div>
@@ -46,44 +86,57 @@
         }}
         on:keydown={() => {}}
       >
-        <SquareTile
-          title="Reverse"
-          description="Package-free groceries delivery service for time poor users"
-          badge="Student"
-          href="/reverse"
-        />
-        <SquareTile
-          title="Pulsair"
-          description="Air management platform for construction workers"
-          badge="Student"
-        />
-        <SquareTile
-          title="Bubble"
-          description="Remote healthcare monitoring platform for health workers"
-          badge="Professional"
-        />
-        <SquareTile
-          title="Coin Rivet"
-          description="Crypto currency investment platform & wallet for beginners"
-          badge="Professional"
-        />
-      </div>
+      <SquareTile
+      title="Reverse"
+      description="Package-free groceries delivery service for time poor users"
+      badge="Student"
+      href="/reverse"
+      src='ProjectTile/ProjectTile1.png'
+    />
+    <SquareTile
+      title="Pulsair"
+      description="Air management platform for construction workers"
+      badge="Student"
+      href="/pulsair"
+      src='ProjectTile/ProjectTile2.png'
+    />
+    <SquareTile
+      title="Bubble"
+      description="Remote healthcare monitoring platform for health workers"
+      badge="Professional"
+      src='ProjectTile/ProjectTile3.png'
+      comingSoon= {true}
+    />
+    <SquareTile
+      title="Coin Rivet"
+      description="Cryptocurrency investment platform & wallet for beginners"
+      badge="Professional"
+      src='ProjectTile/ProjectTile4.png'
+      comingSoon= {true}
+      />
     </div>
   </div>
 </header>
 
 <style>
   header {
-    --header-bg: var(--gray-1);
+    --header-bg: white;
     padding: 16px 24px;
     height: 80px;
     background: var(--header-bg);
-    position: relative;
+    position: sticky;
+    top:0px;
     display: flex;
     align-items: center;
+    transition: transform 0.3s ease-out;
+    z-index:1;
   }
+
+  .scroll-down{
+    transform: translateY(-100%);
+  }
+
   header.dropdown {
-    --header-bg: #f9f9f9;
     z-index: 2;
   }
 
@@ -108,14 +161,14 @@
     font-weight: 600;
     font-style: normal;
     text-decoration: none;
-    color: black;
+    color: var(--darkgrey);
   }
 
   /* Dropdown content (hidden by default) */
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: white;
     width: 100%;
     left: 0;
     top: 100%;
@@ -125,7 +178,7 @@
   }
 
   .dropdown-content.show {
-    background-color: #f9f9f9;
+    background-color: white;
     display: block;
   }
 
@@ -144,20 +197,21 @@
     border: 0;
     cursor: pointer;
     border-block-end: 3px solid var(--border-color, transparent);
-    color: black;
+    color: var(--darkgrey);
     display: inline-block;
     padding: 0.5rem 0.1rem;
     text-decoration: none;
   }
 
   .nav-item a:where(:hover, :focus) {
-    --border-color: black;
+    --border-color: var(--darkgrey);;
   }
   .nav-item button:where(:hover, :focus) {
-    --border-color: black;
+    --border-color: var(--darkgrey);
   }
-  .project-tiles a {
-    color: inherit;
-    text-decoration: none;
+  @media (max-width: 650px) {
+    .project-tiles {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 </style>

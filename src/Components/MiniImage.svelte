@@ -8,7 +8,8 @@
     <img alt="mini" {src} class="image" />
   </div>
   <h3>{title}</h3>
-  <slot />
+  <p><slot /></p>
+  
 </article>
 
 <style>
@@ -22,7 +23,6 @@
   .image-container {
     width: 120px;
     height: 115px;
-    background: var(--gray-1);
     position: relative;
   }
   .image {

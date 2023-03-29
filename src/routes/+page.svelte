@@ -21,83 +21,83 @@
 
   const snapshotInfo = [
     {
-      image: "/reverse.png",
+      image: "/Carousel/Carousel1.png",
       title: "Reverse",
       link: "/reverse",
       description: "",
       snapshot: {
         overview:
-          "Empower time starve young professional and parents to shop plastic free and sustainbly by delivering plastic free groceries to them while providing a wider range of fresh perishable products.",
+          "Empower time-starved young professionals and parents to shop plastic-free and sustainably by delivering plastic-free groceries to them while providing a wider range of fresh perishable products.",
         problem:
-          "Plastic packaging manufacture have skyrocketed and recycling is not the long term solution. One good solution is package free shopping but it’s inconvenient for uses and expensive for business to run.",
+          "Plastic packaging manufacturing has skyrocketed and recycling is not the long-term solution. One good solution is package-free shopping but it’s inconvenient for users and expensive for a business to run.",
         solution:
           "Through user research and expert research, I discovered the opportunity for delivery services that accommodates a wider range of perishable goods and automated handling to save operation cost. ",
         learnings: [
-          "Let user needs lead",
-          "Consulting the expert gives you more indepth insights",
-          "Project planning (manage and scoping)",
+          "Let the user needs lead",
+          "Consulting the expert gives you more in-depth insights",
+          "Project planning (management and scoping)",
           "System thinking",
         ],
       },
     },
     {
-      image: "/pulsair.png",
+      image: "/Carousel/Carousel2.png",
       title: "Pulsair",
       link: "/pulsair",
       description: "",
       snapshot: {
         overview:
-          "Air quality management platform that empower construction workers, their company and the community to minimize the health risk of air pollution and to reduce pollution emission",
+          "Air quality management platform that empowers construction workers, their company and the community to minimize the health risk of air pollution and to reduce pollution emission.",
         problem:
-          "Health risk of air pollution is invisible until fatal illness emerges decades later. Construction workers are one of the vulnerable victim groups but their awareness for preventative measures is low. ",
+          "The health risk of air pollution is invisible until fatal illness emerges decades later. Construction workers are one of the vulnerable victim groups but their awareness of preventative measures is low.",
         solution:
-          "Pulsair provides a personal air monitoring devices for each construction worker that snaps right on their helmet. Air pollution and location data help the company to identify the source of pollution and hence eliminate that to prevent penalty charges from the government. ",
+          "Pulsair provides personal air monitoring devices for each construction worker that snaps on their helmet. Air pollution and location data help the company to identify and eliminate the source of pollution to prevent penalty charges from the government.",
         learnings: [
-          "Gaining industry insight through expert interview",
-          "Pivoting concept based on constant feedback",
+          "Gaining industry insight through expert interviews",
+          "Adding human touch to storytelling",
           "Project management and remote collaborations",
         ],
       },
     },
-    {
-      image: "/image.png",
-      title: "Bubble",
-      link: "/bubble",
-      description: "",
-      snapshot: {
-        overview:
-          "All in one remote health monitoring platform for HCP to keep track of patients condition, and communicate with different parties through a flexible dashboard designed to highlight any emergencies.",
-        problem:
-          "HCP can be overwhelmed by keeping track of multiple patient’s multiple readings if there’s no physical appointments. They also have to maintain regular communication with the patients, their carer and other HCP colleagues all while in a high stress and high stake environment.",
-        solution:
-          "Through iterations of reviews with HCP, the dashboard show clear groupings of patients and an overview of their conditions. The messages for patients and HCP is also clearly distinguish to prevent mistakenly messaging the wrong recipient",
-        learnings: [
-          "Requirements gathering with stakeholders",
-          "Considering cognitive load for users & usability heuristics",
-          "Regular communication with stakeholders",
-        ],
-      },
-    },
-    {
-      image: "/image.png",
-      title: "Coin Rivet",
-      link: "/coinrivet",
-      description: "",
-      snapshot: {
-        overview:
-          "A crypto currency investment platform & wallet for beginners to keep track of their porfolio and make informed decisions when trading.",
-        problem:
-          "Cryptocurrency is a novel concept to the public, hence users struggle to keep track of profits and transactions. Due to technical constraints, this app needs to be used alongside with another wallet that hold cash - Luxon pay, which could be a blocker for the users.",
-        solution:
-          "Created a dashboard with clear information hierarchy, displayed conversion rates intuitively in all transaction pages and utilised just in time error messages with a step by step onboarding process.",
-        learnings: [
-          "Project management and timeline planning",
-          "Regular commmunications with clients",
-          "Stakeholders interviews and management",
-          "UI design and design systems",
-        ],
-      },
-    },
+    // {
+    //   image: "/image.png",
+    //   title: "Bubble",
+    //   link: "/bubble",
+    //   description: "",
+    //   snapshot: {
+    //     overview:
+    //       "All in one remote health monitoring platform for HCP to keep track of patients condition, and communicate with different parties through a flexible dashboard designed to highlight any emergencies.",
+    //     problem:
+    //       "HCP can be overwhelmed by keeping track of multiple patient’s multiple readings if there’s no physical appointments. They also have to maintain regular communication with the patients, their carer and other HCP colleagues all while in a high stress and high stake environment.",
+    //     solution:
+    //       "Through iterations of reviews with HCP, the dashboard show clear groupings of patients and an overview of their conditions. The messages for patients and HCP is also clearly distinguish to prevent mistakenly messaging the wrong recipient",
+    //     learnings: [
+    //       "Requirements gathering with stakeholders",
+    //       "Considering cognitive load for users & usability heuristics",
+    //       "Regular communication with stakeholders",
+    //     ],
+    //   },
+    // },
+    // {
+    //   image: "/image.png",
+    //   title: "Coin Rivet",
+    //   link: "/coinrivet",
+    //   description: "",
+    //   snapshot: {
+    //     overview:
+    //       "A crypto currency investment platform & wallet for beginners to keep track of their porfolio and make informed decisions when trading.",
+    //     problem:
+    //       "Cryptocurrency is a novel concept to the public, hence users struggle to keep track of profits and transactions. Due to technical constraints, this app needs to be used alongside with another wallet that hold cash - Luxon pay, which could be a blocker for the users.",
+    //     solution:
+    //       "Created a dashboard with clear information hierarchy, displayed conversion rates intuitively in all transaction pages and utilised just in time error messages with a step by step onboarding process.",
+    //     learnings: [
+    //       "Project management and timeline planning",
+    //       "Regular commmunications with clients",
+    //       "Stakeholders interviews and management",
+    //       "UI design and design systems",
+    //     ],
+    //   },
+    // },
   ];
   $: currentCarouselProject = snapshotInfo[carouselIndex];
 </script>
@@ -105,23 +105,24 @@
 <section class="home-page-background hero">
   <div class="content-of-page">
     <div class="home-page">
-      <img class="home-image" src={homePage} alt="" />
+      <div class='home-image-button'>
+        <img class="home-image" src={homePage} alt="" />
+        <UnderlinedCta href="#featured">
+          <img src={downArrow} alt="" />
+          Check out my projects
+        </UnderlinedCta>
+      </div>
+      
 
       <div class="h1-h3">
         <h1>Heya, nice to e-meet you!</h1>
         <h3>
-          I am a UX designers who enjoy thinking about the big picture,
-          unpacking problems and framing opportunities. I am a strong believer
-          of using design thinking to improve people’s lives and their
-          environment.
+          I am a UX designer who enjoys thinking about the big picture, unpacking problems, and framing opportunities. I am a strong believer in using design thinking to improve people's lives and their environment. 
         </h3>
       </div>
     </div>
-
-    <UnderlinedCta href="#featured">
-      <img src={downArrow} alt="" />
-      Check out my projects
-    </UnderlinedCta>
+    
+    
   </div>
 </section>
 
@@ -133,32 +134,36 @@
       description="Package-free groceries delivery service for time poor users"
       badge="Student"
       href="/reverse"
+      src='ProjectTile/ProjectTile1.png'
     />
     <SquareTile
       title="Pulsair"
       description="Air management platform for construction workers"
       badge="Student"
       href="/pulsair"
+      src='ProjectTile/ProjectTile2.png'
     />
     <SquareTile
       title="Bubble"
       description="Remote healthcare monitoring platform for health workers"
       badge="Professional"
-      href="/bubble"
+      src='ProjectTile/ProjectTile3.png'
+      comingSoon= {true}
     />
     <SquareTile
       title="Coin Rivet"
-      description="Crypto currency investment platform & wallet for beginners"
+      description="Cryptocurrency investment platform & wallet for beginners"
       badge="Professional"
-      href="/coinrivet"
+      src='ProjectTile/ProjectTile4.png'
+      comingSoon= {true}
     />
   </div>
-  <div class="view-more-projects-container">
+  <!-- <div class="view-more-projects-container">
     <UnderlinedCta href="/this-link-needs-updating">
       <img src={plusArrow} alt="" />
       View more projects
     </UnderlinedCta>
-  </div>
+  </div> -->
 </section>
 
 <section class="content-of-page no-block-padding">
@@ -176,9 +181,7 @@
     arrows={false}
   >
     {#each snapshotInfo as project}
-      <div class="carousel-image-container">
-        <img src={project.image} alt="{project.title} image" />
-      </div>
+        <img class="carousel-image" src={project.image} alt="{project.title} image" />
     {/each}
   </svelte:component>
   <div class="content-of-page carousel-buttons">
@@ -237,19 +240,12 @@
   <h2>Learn more about me</h2>
 
   <div class="about-me-link-container">
-    <h3>Fun fact, but here's more</h3>
+    <h3>I love sleeping (who doesn't)</h3>
     <UnderlinedCta href="/about"
-      >About me<img src={rightArrow} alt="right arrow" /></UnderlinedCta
+      >but there's more to me<img src={rightArrow} alt="right arrow" /></UnderlinedCta
     >
   </div>
 </section>
-<svelte:head>
-  <style>
-    body {
-      --header-bg: #f9f5ec;
-    }
-  </style>
-</svelte:head>
 
 <style>
   .home-page {
@@ -257,13 +253,22 @@
     grid-template-columns: 1fr 1fr;
     gap: 48px;
     align-items: center;
-    padding: 80px 0;
+  
   }
 
   .home-page-background {
     background-color: #f9f5ec;
-    padding-bottom: 48px;
+   height: 632px;
   }
+
+  .home-page-background .content-of-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+
 
   .home-image {
     width: 100%;
@@ -279,7 +284,7 @@
   .carousel {
     background: var(--gray-1);
     width: 100%;
-    height: 300px;
+    height: 400px;
     padding: 0;
     position: relative;
   }
@@ -287,15 +292,17 @@
   .carousel :global(div) {
     height: 100%;
   }
-  .carousel-image-container {
-    position: relative;
-  }
-  .carousel-image-container img {
+
+  .carousel-image {
+    object-fit: cover;
     width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    height: 100%;
   }
+@media (max-width:750px){
+  .carousel {
+   height: 200px;
+  }
+}
 
   .carousel-buttons {
     position: absolute;
@@ -310,7 +317,7 @@
     justify-content: space-between;
   }
   .carousel-button {
-    background: rgba(255, 255, 255, 0.3);
+    background: none;
     border: none;
     font: inherit;
     display: flex;
@@ -339,17 +346,27 @@
   .about-me-link-container {
     display: flex;
     align-items: center;
-    gap: 24px;
+    column-gap: 1ch;
+  }
+  @media (max-width: 500px) {
+  .about-me-link-container {
+    flex-wrap: wrap;
+  }
   }
 
   @media (max-width: 750px) {
     .home-page {
       grid-template-columns: 1fr;
+      
     }
+    .home-page-background {
+    background-color: #f9f5ec;
+    height:unset;
   }
-  @media (max-width: 1100px) {
+
     .project-tiles {
       grid-template-columns: 1fr 1fr;
     }
   }
+  
 </style>

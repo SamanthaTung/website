@@ -5,78 +5,71 @@
   export let src;
 </script>
 
-<div class="image {type}">
-  <div class="image-wide" class:placeholder={!src}>
-    {#if src}
-      <img {src} alt={title} />
-    {/if}
-  </div>
-  <div>
+<div class="image-wrapper {type}">
+  <img {src} alt={title} />
+  <div class="content">
     <h3>{title}</h3>
     <slot />
   </div>
 </div>
 
 <style>
-  :global(.image) + .image {
+  :global(.image-wrapper) + .image-wrapper {
     margin-top: 24px;
   }
 
   /* if image is used in column, dont apply top margin */
-  :global(.column .image) + .image {
+  :global(.column .image-wrapper) + .image-wrapper {
     margin-top: 0px;
   }
-  .image {
-    display: flex;
-    align-items: center;
+  .image-wrapper {
+    display: grid;
+    align-items: start;
+    gap: 24px;
   }
+
   .column {
-    display: flex;
-    flex-direction: column;
+    grid-template-areas:
+      "image"
+      "content";
+    grid-template-rows:
+     auto
+    /* this get's the 2nd row to grow */
+    1fr; 
+   
   }
   .row {
-    flex-direction: row;
-    gap: 24px;
+    grid-template-areas: "image content";
+    grid-template-columns: 1fr 1fr;
   }
   .row-reverse {
-    flex-direction: row-reverse;
-    gap: 24px;
+    grid-template-areas: "content image";
+    grid-template-columns: 1fr 1fr;
   }
-  .image-wide {
-    height: 250px;
+
+  .content {
     width: 100%;
-    position: relative;
-    overflow: hidden;
+    grid-area: content;
+    
   }
-  @media (min-width: 750px) {
-    .row .image-wide, .row-reverse .image-wide {
-      width: 350px;
-      flex-shrink: 0;
-    }
-  }
-  @media (min-width: 900px) {
-    .row .image-wide, .row-reverse .image-wide {
-      width: 450px;
-      flex-shrink: 0;
-    }
-  }
-  .placeholder {
-    background-color: var(--gray-2);
+
+  .content h3 {
+    padding-top: 0;
   }
   img {
-    position: absolute;
-    top: 50%;
-    left: 0;
     width: 100%;
-    transform: translateY(-50%);
+    grid-area: image;
   }
 
   @media (max-width: 750px) {
-    .row {
-      flex-direction: column;
-    }
-    .row-reverse {
-      flex-direction: column;
+    .row,
+    .row-reverse,
+    .column {
+      grid-template-areas:
+        "image"
+        "content";
+      grid-template-rows: auto auto;
+      grid-template-columns: 1fr;
     }
   }
 </style>
