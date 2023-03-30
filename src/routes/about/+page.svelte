@@ -123,7 +123,7 @@
       <ul>
         <li>
           Related to the last point, by focusing our resources on the right
-          problem area, we reduce waste that way.
+          problem area, we reduce waste that way
         </li>
         <li>
           Sustainability is also not just about the environment, but also

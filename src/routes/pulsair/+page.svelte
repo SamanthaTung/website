@@ -135,11 +135,11 @@
       <li>
         Because the health impacts of air pollution appear after decades,
         construction workers struggle to provide evidence that relates their
-        current symptoms to their past jobs.
+        current symptoms to their past jobs
       </li>
       <li>
         This means companies can get away with not protecting their workers from
-        air pollution without paying the cost of worker’s compensation.
+        air pollution without paying the cost of worker’s compensation
       </li>
       <li class="arrow">
         Opportunity to incentivise clean air: How might we encourage the
@@ -161,7 +161,7 @@
       <li>
         Although there are growing trends in mandatory disclosure of site Air
         Quality Index (AQI), the policies still didn’t address improvements that
-        an individual can make.
+        an individual can make
       </li>
       <li class="arrow">Opportunity to connect data to individual’s action</li>
     </ul>
@@ -205,11 +205,11 @@
       <li>
         After carrying the air monitor sensor throughout work, the workers will
         receive an overview of the day including steps, pollution, and hours
-        worked.
+        worked
       </li>
       <li>
         They will also receive customised pollution training specific to their
-        work environment.
+        work environment
       </li>
     </ul>
   </Image>
@@ -222,10 +222,10 @@
       <li>
         With access to individual data shared by the workers, the company
         through the dashboard can now see the hyper-local air quality map and
-        can identify the source of pollution.
+        can identify the source of pollution
       </li>
       <li>
-        This allows them to locate spills, fix leaks, and mend broken machines.
+        This allows them to locate spills, fix leaks, and mend broken machines
       </li>
     </ul>
   </Image>
@@ -244,7 +244,7 @@
         Governments can create better policies around air pollution. Pulsair
         helps them monitor and measure the effectiveness of their policies.
         Having access to the air quality data of other regions and countries,
-        the government can also learn from other initiatives.
+        the government can also learn from other initiatives
       </li>
     </ul>
   </Image>
@@ -263,7 +263,7 @@
         decided to limit access to private data to different levels. Workers
         have full ownership of their data and can give consent to the company to
         access it. The community and the government will receive an average of
-        the AQI and take action respectively.
+        the AQI and take action respectively
       </p>
     </Image>
     <Image
@@ -276,7 +276,7 @@
         was a challenge. We learnt to find resources to help us save time and
         focus our effort on crafting an impactful solution, e.g. using
         low-fidelity sketches to communicate concepts and using illustrations in
-        the short concept video.
+        the short concept video
       </p>
     </Image>
   </TwoColumn>
