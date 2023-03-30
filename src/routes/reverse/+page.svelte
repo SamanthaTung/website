@@ -135,7 +135,7 @@
     <ul>
       <li>
         Reverse logistics limitations: the current operation is labour intensive
-        and requires extra footprint within a shop to store used containers.
+        and requires extra footprint within a shop to store used containers
       </li>
       <li>
         The current non package-free process allows automated handling which
@@ -176,13 +176,13 @@
     <ul>
       <li>
         Reverse tackled the 2 enemies of sustainably living: customer’s need for
-        convenience and its stigma of being unaffordable.
+        convenience and its stigma of being unaffordable
       </li>
       <li>
         Instead of making multiple trips to the farmers market, butchers, and
         package free-shops, customers can now replace most of their weekly
         supermarket delivery with these pre-packed orders all through the app,
-        and pick them up all at home.
+        and pick them up all at home
       </li>
     </ul>
   </Image>
@@ -195,9 +195,9 @@
       <li>
         The container has air-tight seals and air valves that enable modified
         atmosphere packaging (MAP), and vents for breathability, keeping
-        perishable produce fresh.
+        perishable produce fresh
       </li>
-      <li>The e-ink screen on them provides use and storage guidelines.</li>
+      <li>The e-ink screen on them provides use and storage guidelines</li>
     </ul>
   </Image>
   <Image
@@ -208,12 +208,12 @@
     <ul>
       <li>
         Behind the scenes, the smart sensors and the tracking system enabled
-        automated handling helping businesses scale up.
+        automated handling helping businesses scale up
       </li>
       <li>
         They allow the business to pack orders, update information and track
         their resources automatically, which saves cost on storage and makes it
-        affordable to more.
+        affordable to more
       </li>
     </ul>
   </Image>
@@ -227,7 +227,7 @@
       <li>
         Alongside the tracker on the app, reward system and impact visualisation
         via the app also help educate the users on their impact and keep them
-        engaged.
+        engaged
       </li>
     </ul>
   </Image>
@@ -244,13 +244,13 @@
         In-person testing was out of bounds during the pandemic. To work around
         that, instead of delivering containers to participants door steps in
         person, I created a storyboard with the re-enacted scenarios and
-        captured participants’ feedback through zoom.
+        captured participants’ feedback through zoom
       </p>
       <br />
       <p>
         Although remote testing limits the participant’s immersion in the
         concept, showing them the bigger picture through storyboard provides me
-        with more comprehensive feedback.
+        with more comprehensive feedback
       </p>
     </Image>
     <Image
@@ -262,13 +262,13 @@
         Unfortunately during the pandemic when every shop owner is busy adapting
         to people’s new way of shopping, I didn’t get many responses from
         interview requests. Hence, the project lacks practical operational
-        insights from shop owners who are running the business.
+        insights from shop owners who are running the business
       </p>
       <br />
       <p>
         However, to make up for that constraint, I interviewed academics that
         have years of industry knowledge which gave me in-depth insights that
-        are instrumental to the project.
+        are instrumental to the project
       </p>
     </Image>
   </TwoColumn>
@@ -298,9 +298,9 @@
     <div>
       <h3>Let the user's needs lead</h3>
       <li>
-        TThe different elements in the project keep pivoting based on user
+        The different elements in the project keep pivoting based on user
         feedback. Thanks to all the iterations, the concept is getting closer to
-        the user's needs for convenience.
+        the user's needs for convenience
       </li>
     </div>
     <div>
@@ -322,19 +322,19 @@
         Clarifying ambiguity: due to the flexible nature of the project, a clear
         timeline and project planning are required to deliver all the different
         elements: tangible product, digital interface, and the service
-        blueprint, in this project.
+        blueprint, in this project
       </li>
     </div>
     <div>
       <h3>System thinking</h3>
       <li>
         This project sparks my interest in looking at the bigger picture and
-        understanding the context when designing.
+        understanding the context when designing
       </li>
       <li>
         System thinking and service design are crucial to designing for a
         circular economy or sustainability, which I believe is the only way
-        forward.
+        forward
       </li>
     </div>
   </TwoColumn>
