@@ -293,7 +293,7 @@
 </section>
 
 <section class="content-of-page">
-  <h2>8. Learning</h2>
+  <h2>8. Learnings</h2>
   <TwoColumn>
     <div>
       <h3>Let the user's needs lead</h3>
