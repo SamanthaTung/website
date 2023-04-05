@@ -354,7 +354,7 @@
 </section>
 
 <section class="content-of-page no-border">
-  <h2>Watch the video</h2>
+  <h2>See it in action</h2>
   <div class="video-ratio-container">
     <iframe
       class="video"
