@@ -4,13 +4,13 @@
   import TwoColumn from "../../Components/TwoColumn.svelte";
   import MiniImageContainer from "../../Components/MiniImageContainer.svelte";
   import MiniImage from "../../Components/MiniImage.svelte";
-  import UnderlinedCta from "../../Components/UnderlinedCTA.svelte";
-  import rightArrow from "../../Icons/Arrowright.svg";
+
+  import NextProject from "../../Components/NextProject.svelte";
   // import awardIcons from '../../../static/Awards Icons/index'
 </script>
 
 <Hero
-  imageSrc="/reverse.png"
+  imageSrc="ReversePhotos/reverse.png"
   title="Reverse"
   description="Convenient package-free groceries delivery service for time-poor users. Smart containers and trackers made package-free delivery of more variety of food possible and efficient."
   backgroundColor="#A5D0E1"
@@ -340,14 +340,14 @@
   </TwoColumn>
 </section>
 <section class="content-of-page no-border">
-  <h2>Watch the video</h2>
+  <h2>See it in action</h2>
   <div class="video-ratio-container">
     <iframe
       class="video"
       width="1144"
       height="644"
       src="https://www.youtube.com/embed/RvIgmDaMAGU"
-      title="IxDA Team 2 Pulsair"
+      title="Reverse"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen
@@ -355,20 +355,12 @@
   </div>
 </section>
 
-<div class="link">
-  <section class="content-of-page">
-    <div class="title-button">
-      <h3>Next up:</h3>
-      <UnderlinedCta href="/pulsair">
-        <img src={rightArrow} class="icons" alt="arrow icon" />
-        Next
-      </UnderlinedCta>
-    </div>
-
-    <h2>Pulsair</h2>
-    <p>Air management platform for construction workers</p>
-  </section>
-</div>
+<NextProject
+  title="Pulsair"
+  description="Air management platform for construction workers"
+  backgroundColor="#FDD88A"
+  link="/pulair"
+/>
 
 <style>
   .content-of-page {
@@ -389,17 +381,7 @@
     top: 0;
     left: 0;
   }
-  .link {
-    background-color: #fdd88a;
-  }
-  .link .content-of-page,
   .content-of-page.no-border {
     border: 0;
-  }
-  .title-button {
-    display: flex;
-    width: 100%;
-    align-items: start;
-    justify-content: space-between;
   }
 </style>

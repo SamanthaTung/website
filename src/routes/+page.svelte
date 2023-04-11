@@ -105,24 +105,24 @@
 <section class="home-page-background hero">
   <div class="content-of-page">
     <div class="home-page">
-      <div class='home-image-button'>
+      <div class="home-image-button">
         <img class="home-image" src={homePage} alt="" />
         <UnderlinedCta href="#featured">
           <img src={downArrow} alt="" />
           Check out my projects
         </UnderlinedCta>
       </div>
-      
 
       <div class="h1-h3">
         <h1>Heya, nice to e-meet you!</h1>
         <h3>
-          I am a UX designer who enjoys thinking about the big picture, unpacking problems, and framing opportunities. I am a strong believer in using design thinking to improve people's lives and their environment. 
+          I am a UX designer who enjoys thinking about the big picture,
+          unpacking problems, and framing opportunities. I am a strong believer
+          in using design thinking to improve people's lives and their
+          environment.
         </h3>
       </div>
     </div>
-    
-    
   </div>
 </section>
 
@@ -134,28 +134,28 @@
       description="Package-free groceries delivery service for time poor users"
       badge="Student"
       href="/reverse"
-      src='ProjectTile/ProjectTile1.png'
+      src="ProjectTile/ProjectTile1.png"
     />
     <SquareTile
       title="Pulsair"
       description="Air management platform for construction workers"
       badge="Student"
       href="/pulsair"
-      src='ProjectTile/ProjectTile2.png'
+      src="ProjectTile/ProjectTile2.png"
     />
     <SquareTile
       title="Bubble"
       description="Remote healthcare monitoring platform for health workers"
       badge="Professional"
-      src='ProjectTile/ProjectTile3.png'
-      comingSoon= {true}
+      src="ProjectTile/ProjectTile3.png"
+      href="/bubble"
     />
     <SquareTile
       title="Coin Rivet"
       description="Cryptocurrency investment platform & wallet for beginners"
       badge="Professional"
-      src='ProjectTile/ProjectTile4.png'
-      comingSoon= {true}
+      src="ProjectTile/ProjectTile4.png"
+      comingSoon={true}
     />
   </div>
   <!-- <div class="view-more-projects-container">
@@ -181,7 +181,11 @@
     arrows={false}
   >
     {#each snapshotInfo as project}
-        <img class="carousel-image" src={project.image} alt="{project.title} image" />
+      <img
+        class="carousel-image"
+        src={project.image}
+        alt="{project.title} image"
+      />
     {/each}
   </svelte:component>
   <div class="content-of-page carousel-buttons">
@@ -242,7 +246,10 @@
   <div class="about-me-link-container">
     <h3>I love sleeping (who doesn't)</h3>
     <UnderlinedCta href="/about"
-      >but there's more to me<img src={rightArrow} alt="right arrow" /></UnderlinedCta
+      >but there's more to me<img
+        src={rightArrow}
+        alt="right arrow"
+      /></UnderlinedCta
     >
   </div>
 </section>
@@ -253,22 +260,19 @@
     grid-template-columns: 1fr 1fr;
     gap: 48px;
     align-items: center;
-  
   }
 
   .home-page-background {
     background-color: #f9f5ec;
-   height: 632px;
+    height: 632px;
   }
 
-  .home-page-background .content-of-page{
+  .home-page-background .content-of-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
   }
-
-
 
   .home-image {
     width: 100%;
@@ -298,11 +302,11 @@
     width: 100%;
     height: 100%;
   }
-@media (max-width:750px){
-  .carousel {
-   height: 200px;
+  @media (max-width: 750px) {
+    .carousel {
+      height: 200px;
+    }
   }
-}
 
   .carousel-buttons {
     position: absolute;
@@ -349,24 +353,22 @@
     column-gap: 1ch;
   }
   @media (max-width: 500px) {
-  .about-me-link-container {
-    flex-wrap: wrap;
-  }
+    .about-me-link-container {
+      flex-wrap: wrap;
+    }
   }
 
   @media (max-width: 750px) {
     .home-page {
       grid-template-columns: 1fr;
-      
     }
     .home-page-background {
-    background-color: #f9f5ec;
-    height:unset;
-  }
+      background-color: #f9f5ec;
+      height: unset;
+    }
 
     .project-tiles {
       grid-template-columns: 1fr 1fr;
     }
   }
-  
 </style>

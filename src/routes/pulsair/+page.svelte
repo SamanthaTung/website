@@ -4,8 +4,7 @@
   import TwoColumn from "../../Components/TwoColumn.svelte";
   import MiniImageContainer from "../../Components/MiniImageContainer.svelte";
   import MiniImage from "../../Components/MiniImage.svelte";
-  import UnderlinedCta from "../../Components/UnderlinedCTA.svelte";
-  import rightArrow from "../../Icons/Arrowright.svg";
+  import NextProject from "../../Components/NextProject.svelte";
   // import awardIcons from '../../../static/Awards Icons/index'
 </script>
 
@@ -360,28 +359,21 @@
       class="video"
       width="1144"
       height="644"
-      src="https://www.youtube.com/embed/Civ_66orM4E"
-      title="IxDA Team 2 Pulsair"
+      src="https://www.youtube.com/embed/9KcOR2Evgx4"
+      title="Pulsair"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen
     />
   </div>
 </section>
-<div class="link">
-  <section class="content-of-page">
-    <div class="title-button">
-      <h3>Next up:</h3>
-      <UnderlinedCta href="/reverse">
-        <img src={rightArrow} class="icons" alt="arrow icon" />
-        Next
-      </UnderlinedCta>
-    </div>
 
-    <h2>Reverse</h2>
-    <p>Package-free groceries delivery service for time poor users</p>
-  </section>
-</div>
+<NextProject
+  title="Bubble"
+  description="Remote healthcare monitoring platform for Healthcare Professional"
+  backgroundColor="#A0C3ED"
+  link="/bubble"
+/>
 
 <style>
   .content-of-page {
@@ -403,17 +395,8 @@
     top: 0;
     left: 0;
   }
-  .link {
-    background-color: #a5d0e1;
-  }
-  .link .content-of-page,
+
   .content-of-page.no-border {
     border: 0;
-  }
-  .title-button {
-    display: flex;
-    width: 100%;
-    align-items: start;
-    justify-content: space-between;
   }
 </style>

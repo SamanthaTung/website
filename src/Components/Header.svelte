@@ -2,7 +2,7 @@
   // @ts-nocheck
 
   import { onMount } from "svelte";
-import SquareTile from "../Components/SquareTile.svelte";
+  import SquareTile from "../Components/SquareTile.svelte";
   /** @type {HTMLElement} */
   let headerEl;
   let logoEl;
@@ -14,9 +14,8 @@ import SquareTile from "../Components/SquareTile.svelte";
   let dropdownOpen = false;
 
   onMount(() => {
-    prevScroll = window.scrollY
-   
-  })
+    prevScroll = window.scrollY;
+  });
 </script>
 
 <svelte:window
@@ -34,31 +33,30 @@ import SquareTile from "../Components/SquareTile.svelte";
       dropdownOpen = false;
     }
   }}
+  on:scroll={(e) => {
+    // prevScroll = window.scrollY
+    currentScroll = window.scrollY;
+    console.log("prevScroll", prevScroll);
+    console.log("currentScroll", currentScroll);
 
-on:scroll={(e) =>{
-// prevScroll = window.scrollY
-currentScroll = window.scrollY
-console.log('prevScroll',prevScroll)
-console.log('currentScroll',currentScroll)
+    //v do something
+    if (currentScroll >= prevScroll && currentScroll > 80) {
+      // hide
+      scrollingDown = true;
+    } else {
+      // show
+      scrollingDown = false;
+    }
 
-//v do something
-if (currentScroll >= prevScroll && currentScroll>80 ) {
-  // hide 
-  scrollingDown=true;
-
-} else {
-  // show
-  scrollingDown=false;
-}
-
-prevScroll=currentScroll
-}
-
-}
-
+    prevScroll = currentScroll;
+  }}
 />
 
-<header class={scrollingDown===true? 'scroll-down':''} class:dropdown={dropdownOpen} bind:this={headerEl}>
+<header
+  class={scrollingDown === true ? "scroll-down" : ""}
+  class:dropdown={dropdownOpen}
+  bind:this={headerEl}
+>
   <div class="width-clamper">
     <a href="/" class="logo" bind:this={logoEl}> Sam Tung</a>
     <div class="nav-option">
@@ -86,34 +84,35 @@ prevScroll=currentScroll
         }}
         on:keydown={() => {}}
       >
-      <SquareTile
-      title="Reverse"
-      description="Package-free groceries delivery service for time poor users"
-      badge="Student"
-      href="/reverse"
-      src='ProjectTile/ProjectTile1.png'
-    />
-    <SquareTile
-      title="Pulsair"
-      description="Air management platform for construction workers"
-      badge="Student"
-      href="/pulsair"
-      src='ProjectTile/ProjectTile2.png'
-    />
-    <SquareTile
-      title="Bubble"
-      description="Remote healthcare monitoring platform for health workers"
-      badge="Professional"
-      src='ProjectTile/ProjectTile3.png'
-      comingSoon= {true}
-    />
-    <SquareTile
-      title="Coin Rivet"
-      description="Cryptocurrency investment platform & wallet for beginners"
-      badge="Professional"
-      src='ProjectTile/ProjectTile4.png'
-      comingSoon= {true}
-      />
+        <SquareTile
+          title="Reverse"
+          description="Package-free groceries delivery service for time poor users"
+          badge="Student"
+          href="/reverse"
+          src="ProjectTile/ProjectTile1.png"
+        />
+        <SquareTile
+          title="Pulsair"
+          description="Air management platform for construction workers"
+          badge="Student"
+          href="/pulsair"
+          src="ProjectTile/ProjectTile2.png"
+        />
+        <SquareTile
+          title="Bubble"
+          description="Remote healthcare monitoring platform for health workers"
+          badge="Professional"
+          href="/bubble"
+          src="ProjectTile/ProjectTile3.png"
+        />
+        <SquareTile
+          title="Coin Rivet"
+          description="Cryptocurrency investment platform & wallet for beginners"
+          badge="Professional"
+          src="ProjectTile/ProjectTile4.png"
+          comingSoon={true}
+        />
+      </div>
     </div>
   </div>
 </header>
@@ -125,14 +124,14 @@ prevScroll=currentScroll
     height: 80px;
     background: var(--header-bg);
     position: sticky;
-    top:0px;
+    top: 0px;
     display: flex;
     align-items: center;
     transition: transform 0.3s ease-out;
-    z-index:1;
+    z-index: 1;
   }
 
-  .scroll-down{
+  .scroll-down {
     transform: translateY(-100%);
   }
 
@@ -204,7 +203,7 @@ prevScroll=currentScroll
   }
 
   .nav-item a:where(:hover, :focus) {
-    --border-color: var(--darkgrey);;
+    --border-color: var(--darkgrey);
   }
   .nav-item button:where(:hover, :focus) {
     --border-color: var(--darkgrey);
