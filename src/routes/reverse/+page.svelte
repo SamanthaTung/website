@@ -359,7 +359,7 @@
   title="Pulsair"
   description="Air management platform for construction workers"
   backgroundColor="#FDD88A"
-  link="/pulair"
+  link="/pulsair"
 />
 
 <style>

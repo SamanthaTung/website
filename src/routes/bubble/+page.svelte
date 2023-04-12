@@ -254,21 +254,4 @@
         border-width: 1px;
         border-color: var(--gray-2);
     }
-    .video-ratio-container {
-        height: auto;
-        width: 100%;
-        padding-top: calc(100% * (9 / 16));
-        position: relative;
-    }
-    .video {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    .content-of-page.no-border {
-        border: 0;
-    }
 </style>
