@@ -8,6 +8,10 @@
     // import awardIcons from '../../../static/Awards Icons/index'
 </script>
 
+<svelte:head>
+    <title>Bubble</title>
+</svelte:head>
+
 <Hero
     imageSrc="BubblePhotos/bubble.png"
     title="Bubble"

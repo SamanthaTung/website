@@ -9,6 +9,10 @@
   // import awardIcons from '../../../static/Awards Icons/index'
 </script>
 
+<svelte:head>
+  <title>Reverse</title>
+</svelte:head>
+
 <Hero
   imageSrc="ReversePhotos/reverse.png"
   title="Reverse"

@@ -8,6 +8,9 @@
   // import awardIcons from '../../../static/Awards Icons/index'
 </script>
 
+<svelte:head>
+  <title>Pulsair</title>
+</svelte:head>
 <Hero
   imageSrc="/PulsairPhotos/pulsair.png"
   title="Pulsair"
