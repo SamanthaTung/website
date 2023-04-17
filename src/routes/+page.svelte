@@ -59,49 +59,52 @@
         ],
       },
     },
-    // {
-    //   image: "/image.png",
-    //   title: "Bubble",
-    //   link: "/bubble",
-    //   description: "",
-    //   snapshot: {
-    //     overview:
-    //       "All in one remote health monitoring platform for HCP to keep track of patients condition, and communicate with different parties through a flexible dashboard designed to highlight any emergencies.",
-    //     problem:
-    //       "HCP can be overwhelmed by keeping track of multiple patient’s multiple readings if there’s no physical appointments. They also have to maintain regular communication with the patients, their carer and other HCP colleagues all while in a high stress and high stake environment.",
-    //     solution:
-    //       "Through iterations of reviews with HCP, the dashboard show clear groupings of patients and an overview of their conditions. The messages for patients and HCP is also clearly distinguish to prevent mistakenly messaging the wrong recipient",
-    //     learnings: [
-    //       "Requirements gathering with stakeholders",
-    //       "Considering cognitive load for users & usability heuristics",
-    //       "Regular communication with stakeholders",
-    //     ],
-    //   },
-    // },
-    // {
-    //   image: "/image.png",
-    //   title: "Coin Rivet",
-    //   link: "/coinrivet",
-    //   description: "",
-    //   snapshot: {
-    //     overview:
-    //       "A crypto currency investment platform & wallet for beginners to keep track of their porfolio and make informed decisions when trading.",
-    //     problem:
-    //       "Cryptocurrency is a novel concept to the public, hence users struggle to keep track of profits and transactions. Due to technical constraints, this app needs to be used alongside with another wallet that hold cash - Luxon pay, which could be a blocker for the users.",
-    //     solution:
-    //       "Created a dashboard with clear information hierarchy, displayed conversion rates intuitively in all transaction pages and utilised just in time error messages with a step by step onboarding process.",
-    //     learnings: [
-    //       "Project management and timeline planning",
-    //       "Regular commmunications with clients",
-    //       "Stakeholders interviews and management",
-    //       "UI design and design systems",
-    //     ],
-    //   },
-    // },
+    {
+      image: "/Carousel/Carousel3.png",
+      title: "Bubble",
+      link: "/bubble",
+      description: "",
+      snapshot: {
+        overview:
+          "All-in-one remote health monitoring platform for HCP to keep track of patient's condition, and communicate with different parties through a flexible dashboard designed to highlight any emergencies.",
+        problem:
+          "HCP can be overwhelmed by keeping track of multiple patients’ multiple readings if there are no physical appointments. They also have to maintain regular communication with the patients, their carers and other HCP colleagues all while in a high-stress and high stake environment.",
+        solution:
+          "Through iterations of reviews with HCP, the dashboard show clear groupings of patients and an overview of their conditions. The messages for patients and HCP are also clearly distinguished to prevent mistakenly messaging the wrong recipient.",
+        learnings: [
+          "Requirements gathering with stakeholders",
+          "Considering cognitive load for users & usability heuristics",
+          "Regular communication with stakeholders",
+        ],
+      },
+    },
+    {
+      image: "/Carousel/Carousel4.svg",
+      title: "Coin Rivet",
+      link: "/coinrivet",
+      description: "",
+      snapshot: {
+        overview:
+          "A cryptocurrency investment platform & wallet for beginners to keep track of their portfolio and make informed decisions when trading.",
+        problem:
+          "Cryptocurrency is a novel concept to the public, hence users struggle to keep track of profits and transactions. Due to technical constraints, this app needs to be used alongside another wallet that holds cash - Luxon Pay, which could be a blocker for the users.",
+        solution:
+          "Created a dashboard with a clear information hierarchy, displayed conversion rates intuitively on all transaction pages and utilised just-in-time error messages with a step-by-step onboarding process.",
+        learnings: [
+          "Project management and timeline planning",
+          "Regular communication with clients",
+          "Stakeholders interviews and management",
+          "UI design and design systems",
+        ],
+      },
+    },
   ];
   $: currentCarouselProject = snapshotInfo[carouselIndex];
 </script>
 
+<svelte:head>
+  <title>Sam Tung</title>
+</svelte:head>
 <section class="home-page-background hero">
   <div class="content-of-page">
     <div class="home-page">
@@ -155,7 +158,7 @@
       description="Cryptocurrency investment platform & wallet for beginners"
       badge="Professional"
       src="ProjectTile/ProjectTile4.png"
-      comingSoon={true}
+      href="/coinrivet"
     />
   </div>
   <!-- <div class="view-more-projects-container">

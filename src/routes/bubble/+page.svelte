@@ -246,10 +246,10 @@
 </section>
 
 <NextProject
-    title="Reverse"
-    description="Package-free groceries delivery service for time poor users"
-    backgroundColor="#A5D0E1"
-    link="/reverse"
+    title="Coin Rivet"
+    description="Crypto currency investment platform & wallet for beginners"
+    backgroundColor="#B3D8C6"
+    link="/coinrivet"
 />
 
 <style>

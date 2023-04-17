@@ -109,8 +109,8 @@
           title="Coin Rivet"
           description="Cryptocurrency investment platform & wallet for beginners"
           badge="Professional"
+          href="/coinrivet"
           src="ProjectTile/ProjectTile4.png"
-          comingSoon={true}
         />
       </div>
     </div>
