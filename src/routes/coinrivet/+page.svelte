@@ -133,7 +133,8 @@
     >
         <p>
             By only displaying information that is relevant to the user’s action
-            at that point, we managed to keep the pages clean:
+            at that point, we managed to optimised the information for the
+            users' actions:
         </p>
         <ul>
             <li>

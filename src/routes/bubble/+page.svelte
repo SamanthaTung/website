@@ -154,14 +154,15 @@
     </Image>
     <Image
         type="row-reverse"
-        title="Our containers enable a wider range of products to be sold package free"
+        title="Error prevention"
         src="BubblePhotos/SolveProblem2.png"
     >
         <ul>
             <li>
-                The container has air-tight seals and air valves that enable
-                modified atmosphere packaging (MAP), and vents for
-                breathability, keeping perishable produce fresh
+                To ensure important messages are sent to the correct recipient,
+                we kept the 2 chat boxes on different navigation bars. We also
+                added a message above the typing field to differentiate the two
+                and reassured the HCP before they send the message.
             </li>
             <li>
                 The e-ink screen on them provides use and storage guidelines
