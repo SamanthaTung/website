@@ -247,9 +247,9 @@
   <h2>Learn more about me</h2>
 
   <div class="about-me-link-container">
-    <h3>I love sleeping (who doesn't)</h3>
+    <h3>As you can tell I'm passionate about design for good,</h3>
     <UnderlinedCta href="/about"
-      >but there's more to me<img
+      >and there's more to me<img
         src={rightArrow}
         alt="right arrow"
       /></UnderlinedCta
